@@ -1,5 +1,5 @@
 import TheHerothumb from "./components/TheHeroThumbnail.js";
-import TheLightbox from "./components/TheLightbox.js";
+import Lightbox from "./components/TheLightbox.js";
 
 (() => {
     // create vue instance here
@@ -17,18 +17,20 @@ import TheLightbox from "./components/TheLightbox.js";
         data() {
             return {
                 heroData: {},
-                loadBData: {}
+                loadBData: {},
+                showLightBox:false
             }
         },
 
-        components:{
+        components: {
           theherothumb: TheHerothumb,
-          theLightbox: TheLightbox
+          lightbox: Lightbox
         },
 
         methods: {
             loadLightbox(hero) {
                 this.loadBData = hero;
+                this.showLightBox = true;
             }
         }
     }).mount('#app')

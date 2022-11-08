@@ -33,7 +33,7 @@
             <p>Use your mouse to hover / click to discover more about each Marvel character</p>
         </article>
     <!-- lightbox component goes here -->
-        
+        <lightbox @closelb="this.showLightBox = false" v-if="showLightBox" :hero="loadBData"></lightbox>
 
     <!-- end lightbox component -->
     

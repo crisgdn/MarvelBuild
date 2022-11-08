@@ -19,6 +19,7 @@ export default {
 
     methods: {
         loadBData() {
+            //pass the individual object back to the main VM
             this.$emit('loadbdata', this.hero);
         }
     }
